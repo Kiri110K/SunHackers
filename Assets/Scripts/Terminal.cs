@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Termina : MonoBehaviour
+public class Terminal : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,3 +16,6 @@ public class Termina : MonoBehaviour
         
     }
 }
+
+
+
