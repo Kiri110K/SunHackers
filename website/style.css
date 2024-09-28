@@ -1,0 +1,41 @@
+body{
+    background-image: url(./assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p{
+    color: rgb(0,255,102);
+    font-family: "parkway-hotel", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-left: 0vh;
+    padding-right: 0VH;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/*
+.content-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+*/
+
+.title{
+    font-size: 8vh;
+    text-shadow: 5px 5px rgb(104, 104, 104); 
+    transition: color 0.2s;
+}
+
+.title:hover{
+    color: rgb(50,50,50);
+}
