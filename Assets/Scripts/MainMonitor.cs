@@ -122,7 +122,7 @@ public class MainMonitor : MonoBehaviour
     private IEnumerator PauseCoroutine()
     {
         // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f); // todo revert
 
         // Activate input field when the game starts
         userInputField.ActivateInputField();
