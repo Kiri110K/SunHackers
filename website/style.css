@@ -58,6 +58,15 @@ p{
 a{
     text-decoration: none;
     color: inherit;
+    transition: color 0.1s;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: white;
 }
 
 .button{
