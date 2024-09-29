@@ -8,10 +8,11 @@ using System.Text;
 
 public class MainMonitor : MonoBehaviour
 {
+    public Terminal term;
+    public static AudioController audioController;
     public TextMeshPro monitor;
     public TMP_InputField userInputField; // The InputField for user input
     // public const string prompt = "> ";
-    public Terminal term = new Terminal();
 
     public InteractiveBubble bub;
 
@@ -23,7 +24,9 @@ public class MainMonitor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
+        audioController = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioController>();
+        term = new Terminal(audioController);
         SetupTerminal(); // Initialize FS, put some files, etc
 
         // Add 14 "\n" strings to the queue

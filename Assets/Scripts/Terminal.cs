@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class Terminal // : MonoBehaviour
 {
-    public AudioSource errorAudio;
+    public AudioController audioController;
 
     public PretendFS FS;
     public List<(string, string)> history;
 
     public PretendFS.Directory currentDir;
 
-    public Terminal() 
+    public Terminal(AudioController instanceAudioController) 
     {
+        audioController = instanceAudioController;
         FS = new PretendFS();
         history = new List<(string, string)>();
         currentDir = FS.NavigateToDirectory(null);
@@ -111,7 +112,7 @@ public string RunCommand(string command)
 
             default:
                 result = "Command not found: " + cmd;
-                errorAudio.Play();
+                    audioController.playBeep();
                 break;
         }
     }
