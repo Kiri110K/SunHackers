@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 
-public class PretendFS : MonoBehaviour
+public class PretendFS // : MonoBehaviour
 {
     public class File
     {
@@ -130,7 +130,7 @@ public class PretendFS : MonoBehaviour
         }
 
         // Navigate to a directory based on path
-        private Directory NavigateToDirectory(string path)
+        public Directory NavigateToDirectory(string path)
         {
             var currentDir = root;
             if (string.IsNullOrEmpty(path) || path == "/")
