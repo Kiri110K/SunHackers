@@ -17,6 +17,8 @@ public class MainMonitor : MonoBehaviour
 
     public Status stts;
 
+    public Canvas agentBubble;
+
     Queue<string> history = new Queue<string>();
 
     // Start is called before the first frame update
@@ -30,9 +32,6 @@ public class MainMonitor : MonoBehaviour
             history.Enqueue("\n");
         }
 
-        // history.Enqueue("Terminal is now running...\n");
-
-
         monitor.text = "";
 
         // Initialize the text displayed on the monitor
@@ -40,27 +39,7 @@ public class MainMonitor : MonoBehaviour
         {
             monitor.text += item;
         }
-        
-
-        // Set the input field text with the prompt
-        // userInputField.text = prompt;
-
-        
-        // Set caret blink rate
-        userInputField.caretBlinkRate = 0.5f;
-
-        // Set caret width to make it more visible (e.g., 2 pixels wide)
-        userInputField.caretWidth = 2;
-
-        // Optionally set caret color (make sure it's visible against your background)
-        userInputField.caretColor = Color.white;
-
-        // Activate input field when the game starts
-        userInputField.ActivateInputField();
-        
-
-        // Listen for the submit event (Enter key)
-        userInputField.onSubmit.AddListener(HandleSubmit);
+        StartCoroutine(PauseCoroutine());
     }
 
     void HandleSubmit(string submittedText)
@@ -137,5 +116,21 @@ public class MainMonitor : MonoBehaviour
         term.FS.CreateFile("OS", "system32");
 
         term.FS.CreateFile("bin", "PROGRAMS");
+    }
+
+    // Coroutine for pausing
+    private IEnumerator PauseCoroutine()
+    {
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Activate input field when the game starts
+        userInputField.ActivateInputField();
+        
+        // Listen for the submit event (Enter key)
+        userInputField.onSubmit.AddListener(HandleSubmit);
+
+        // Replace the secondary screen
+        stts.Neutral();
     }
 }
