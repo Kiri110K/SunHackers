@@ -17,7 +17,7 @@ public class MainMonitor : MonoBehaviour
 
     public Status stts;
 
-    public Canvas agentBubble;
+    public GameObject agentBubble;
 
     Queue<string> history = new Queue<string>();
 
@@ -130,7 +130,10 @@ public class MainMonitor : MonoBehaviour
         // Listen for the submit event (Enter key)
         userInputField.onSubmit.AddListener(HandleSubmit);
 
-        // Replace the secondary screen
+        // Replace the secondary screen with face
         stts.Neutral();
+
+        //todo Add a call to sound here!!!
+        agentBubble.SetActive(true);
     }
 }
