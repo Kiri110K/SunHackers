@@ -17,7 +17,7 @@ public class MainMonitor : MonoBehaviour
 
     public Status stts;
 
-    public GameObject agentBubble;
+    public Canvas agentBubble;
 
     Queue<string> history = new Queue<string>();
 
@@ -134,6 +134,6 @@ public class MainMonitor : MonoBehaviour
         stts.Neutral();
 
         //todo Add a call to sound here!!!
-        agentBubble.SetActive(true);
+        agentBubble.enabled = true;
     }
 }

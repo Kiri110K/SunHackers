@@ -6,7 +6,7 @@ using System;
 
 public class InteractiveBubble : MonoBehaviour
 {
-    public GameObject agentBubble;
+    public Canvas agentBubble;
     public TextMeshProUGUI bubble;
     public float typingSpeed = 0.05f; // Time between each letter
 
@@ -29,7 +29,7 @@ public class InteractiveBubble : MonoBehaviour
     {   
         
         bubble.text = ""; // Clear the existing text
-        agentBubble.SetActive(true); // Be sure that agent is active when starts typing
+        agentBubble.enabled = true; // Be sure that agent is active when starts typing
 
         for (int i = 0; i < inputText.Length; i++)
         {
@@ -40,7 +40,7 @@ public class InteractiveBubble : MonoBehaviour
         Debug.Log("Finished typing");
 
         yield return new WaitForSeconds(2f); // Wait for some time before hiding the bubble
-        agentBubble.SetActive(false);
+        agentBubble.enabled = false;
     }
 
     // Coroutine to handle ringing and talking
