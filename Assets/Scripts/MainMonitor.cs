@@ -13,7 +13,7 @@ public class MainMonitor : MonoBehaviour
     {
         // Initialize the text displayed on the monitor
         monitor.text = "Terminal is now running...";
-        
+
         // Activate input field when the game starts
         userInputField.ActivateInputField();
     }
