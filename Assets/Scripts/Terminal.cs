@@ -28,7 +28,7 @@ public string RunCommand(string command)
         return "No command entered.";
     }
 
-    string cmd = parts[0].ToLower();
+    string cmd = parts[0];
     string result = "";
 
     try

@@ -6,6 +6,7 @@ using System;
 
 public class InteractiveBubble : MonoBehaviour
 {
+
     public Canvas bubbleCanvas;
     public TextMeshProUGUI bubble;
     public float typingSpeed = 0.05f; // Time between each letter
@@ -29,6 +30,7 @@ public class InteractiveBubble : MonoBehaviour
         Debug.Log("Statring typing coroutine\n");
 
         bubble.text = ""; // Clear the existing text
+
         bubbleCanvas.enabled = true; // Be sure that agent is active when starts typing
 
         for (int i = 0; i < inputText.Length; i++)
@@ -41,9 +43,9 @@ public class InteractiveBubble : MonoBehaviour
         Debug.Log("Finished typing");
 
         yield return new WaitForSeconds(2f); // Wait for some time before hiding the bubble
+
         Debug.Log("Canvas should be disabled");
         bubbleCanvas.enabled = false;
-
     }
 
     // Coroutine to handle ringing and talking

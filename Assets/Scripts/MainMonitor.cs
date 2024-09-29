@@ -17,7 +17,7 @@ public class MainMonitor : MonoBehaviour
 
     public Status stts;
 
-    public GameObject agentBubble;
+    public Canvas agentBubble;
 
     Queue<string> history = new Queue<string>();
 
@@ -72,10 +72,22 @@ public class MainMonitor : MonoBehaviour
     {   
         // Interactive Bubble here for now
 
-        bub.StartTyping("Hello, I am an interactive text bubble!\nThanks for using unity!!!");
+        switch (newText) {
+            case "cd AI":
+                bub.StartTyping("Looks like we are on the right 'path' -_^! <color=red>L</color>et's <color=red>S</color>ee what is hiding in here");
+                break;
 
+            case "ls":
+                bub.StartTyping("Let's take a look around, maybe there are some important things here........");
+                break;
 
-        // Interactive Bubble here for now
+            case "cd AI/Plans":
+                bub.StartTyping("This will probably be usefull sometime later, but now we are looking for CORE");
+                break;
+
+            default:
+                break;
+        }
 
 
         string response = term.RunCommand(newText);
@@ -134,6 +146,6 @@ public class MainMonitor : MonoBehaviour
         stts.Neutral();
 
         //todo Add a call to sound here!!!
-        agentBubble.SetActive(true);
+        agentBubble.enabled = true;
     }
 }
