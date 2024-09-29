@@ -1055,7 +1055,6 @@ MonoBehaviour:
   bub: {fileID: 1886145606}
   stts: {fileID: 1136870155}
   agentBubble: {fileID: 1635795325}
-
 --- !u!1 &1016030275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1635795326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2263,7 +2262,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1024741958}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 397762604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2933,13 +2932,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841318ae9c67c44d7ac0a3c8d96783b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentBubble: {fileID: 0}
   bubble: {fileID: 1886145604}
   typingSpeed: 0.05
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1635795326}
   - {fileID: 397762604}
   - {fileID: 1016030278}
   - {fileID: 1540345400}
