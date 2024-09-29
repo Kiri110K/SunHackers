@@ -66,7 +66,7 @@ dP    8boIIP 8888P  .dP  Ybo 88   (8)  YbodP
 
     //Testing
     void Start(){
-        //textMesh.text = neutral();
+        textMesh.text = Intro();
         //textMesh.text = Destroyed(); 
     }
 
