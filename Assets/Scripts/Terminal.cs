@@ -6,10 +6,10 @@ using UnityEngine;
 public class Terminal // : MonoBehaviour
 {
 
-    private PretendFS FS;
-    private List<(string, string)> history;
+    public PretendFS FS;
+    public List<(string, string)> history;
 
-    private PretendFS.Directory currentDir;
+    public PretendFS.Directory currentDir;
 
     public Terminal() 
     {
@@ -49,19 +49,24 @@ public string RunCommand(string command)
                 break;
 
             case "ls": // List directory contents
+                if (parts.Length > 1) {
+                    result=  "Usage: ls";
+                    break;
+                }
+
                 var files = currentDir.Files;
                 var directories = currentDir.Directories;
 
                 result = "Directories:\n";
                 foreach (var dir in directories)
                 {
-                    result += dir.Key + "/\n";
+                    result += "\t" + dir.Key + "/\n";
                 }
 
                 result += "Files:\n";
                 foreach (var file in files)
                 {
-                    result += file.Key + "\n";
+                    result += "\t" + file.Key + "\n";
                 }
                 break;
 
