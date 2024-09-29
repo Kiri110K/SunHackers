@@ -15,11 +15,13 @@ public class MainMonitor : MonoBehaviour
 
     public InteractiveBubble bub;
 
+    public Status stts;
+
     Queue<string> history = new Queue<string>();
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         SetupTerminal(); // Initialize FS, put some files, etc
 
         // Add 14 "\n" strings to the queue

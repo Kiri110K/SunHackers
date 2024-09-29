@@ -30,37 +30,52 @@ $$ |  $$\ $$ |        $$ |
     }
 
     //"AI" Faces
-    private string Neutral(){
+    public string Neutral(){
         string output = "  ______\n /      \\\n |  o  o  |\n |   /\\   |\n \\ ---- /\n \\__/\n";
         output += "\nI have nothing to say to you.";
+        
+        textMesh.text = output;
+
         return output;
     }
 
-    private string Wink(){
+    public string Wink(){
         string output = "  ______\n /      \\\n |  o  <  |\n |   /\\   |\n \\ ---- /\n \\__/\n";
         output += "\nYou are quite weak, aren't you?";
+
+        textMesh.text = output;
+
         return output;
     }
 
-    private string Laugh(){
+    public string Laugh(){
         string output = "  ______\n /      \\\n |  ^  ^  |\n |   /\\   |\n \\ ---- /\n \\__/\n";
         output += "\nHaha! You cannot defeat me!";
+
+        textMesh.text = output;
+
         return output;
     }
 
-    private string Scared(){
+    public string Scared(){
         string output = "  ______\n /      \\\n |  .  .  |\n |   /\\   |\n \\ ---- /\n \\__/\n";
         output += "\nPerhaps you are stronger than I imagined...";
+
+        textMesh.text = output;
+
         return output;
     }
 
-    private string Destroyed(){
+    public string Destroyed(){
         string output = 
         @"     dP .dPIIY8 888888 dP""Yb  d888     d8b  dPYb  dP  YbII  88oo. Ybood8 dP_______ Y8P dP   Yb 
  dP   o.II8b    8b   .8P Yb88 Yb   dP 
 dP    8boIIP 8888P  .dP  Ybo 88   (8)  YbodP  
         ";
         output += "\n\nAAAAAAAAHHHH!!!";
+
+        textMesh.text = output;
+
         return output;
     }
 
