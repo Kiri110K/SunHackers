@@ -95,6 +95,18 @@ public string RunCommand(string command)
                     }
                 }
                 break;
+            
+            case "help":
+                result += "Here's a list of cool commands:\n";
+                result += "\tls for LiSting everything\n";
+                result += "\tcd for Changing Directory\n";
+                result += "\trm for ReMoving stuff\n";
+                result += "\thelp for this screen!\n";
+
+
+
+                break;
+
 
             default:
                 result = "Command not found: " + cmd;
