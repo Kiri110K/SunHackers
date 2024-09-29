@@ -30,15 +30,17 @@ p{
 
 .title{
     font-size: 8vh;
-    text-shadow: 5px 5px rgb(104, 104, 104); 
-    transition: color 0.2s;
-    font-family: "parkway-hotel", sans-serif;
-    font-weight: 500;
+    text-shadow: 2px 2px rgb(104, 104, 104); 
+    transition: color 0.2s, text-shadow 0.2s;
+    font-family: "ethnocentric", sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
 .title:hover{
     color: rgb(50,50,50);
+    text-shadow: 5px 5px rgb(104, 104, 104); 
+
 }
 
 .footer{
@@ -53,7 +55,7 @@ p{
     font-size: 3vh;
 }
 
-.link{
+a{
     text-decoration: none;
     color: inherit;
 }
@@ -69,6 +71,7 @@ p{
     padding-right: 3vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    box-shadow: 5px 10px rgb(50,50,50);
     transition: background-color 0.4s, color 0.4s;
 }
 
@@ -81,4 +84,10 @@ p{
 
 .button:active{
     opacity: 50%;
+}
+
+.cliEmphasis{
+    font-family: "ethnocentric", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
