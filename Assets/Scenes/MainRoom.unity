@@ -836,7 +836,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.402875, y: 2.0065715, z: 9.531981, w: 2.067706}
+  m_margin: {x: 9.402875, y: 2.0065715, z: 9.531981, w: 2.1726384}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -928,6 +928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monitor: {fileID: 569921843}
+  userInputField: {fileID: 1527230808}
 --- !u!1 &1016030275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,8 +1347,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527230806}
-  m_LocalRotation: {x: 0.10134304, y: -0.4759041, z: 0.06606588, w: 0.8711373}
-  m_LocalPosition: {x: 0, y: 0, z: 1.9260262}
+  m_LocalRotation: {x: 0.08763543, y: -0.70498043, z: 0.086334474, w: 0.6984762}
+  m_LocalPosition: {x: 0, y: 0, z: 0.067}
   m_LocalScale: {x: 1.2298, y: 1.2298, z: 1.2298}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1355,7 +1356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 13.854, y: -57.162, z: 1.1}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.1840086, y: 0.21399859}
+  m_AnchoredPosition: {x: 0.693, y: -0.18}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1527230808
@@ -1603,7 +1604,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.6558695, y: 2.3968859, z: 9.667906, w: 2.1891243}
+  m_margin: {x: 9.36929, y: 2.6491795, z: 9.443143, w: 2.1891243}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
