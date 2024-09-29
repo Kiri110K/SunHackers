@@ -13,6 +13,8 @@ public class MainMonitor : MonoBehaviour
     public const string prompt = "> ";
     public Terminal t = new Terminal();
 
+    public InteractiveBubble bub;
+
     Queue<string> history = new Queue<string>();
 
     // Start is called before the first frame update
@@ -86,7 +88,15 @@ public class MainMonitor : MonoBehaviour
 
     // Function to update the monitor text
     public void UpdateMonitor(string newText)
-    {
+    {   
+        // Interactive Bubble here for now
+
+        bub.StartTyping("Hello, I am an interactive text bubble!\nThanks for using unity!!!");
+
+
+        // Interactive Bubble here for now
+
+
         string response = t.RunCommand(newText);
 
         string[] lines = response.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
