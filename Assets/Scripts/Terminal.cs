@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Terminal : MonoBehaviour
+public class Terminal // : MonoBehaviour
 {
 
     private PretendFS FS;
