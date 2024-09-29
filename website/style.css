@@ -6,13 +6,13 @@ body{
 
 p{
     color: rgb(0,255,102);
-    font-family: "parkway-hotel", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: helvetica, sans-serif;
     padding-left: 0vh;
     padding-right: 0VH;
     padding-top: 0vh;
     padding-bottom: 0vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .flex-container{
@@ -22,20 +22,63 @@ p{
     align-items: baseline;
 }
 
-/*
-.content-flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.center{
+    margin: 0vh;
+    position: absolute;
+    top: 50%;
 }
-*/
 
 .title{
     font-size: 8vh;
     text-shadow: 5px 5px rgb(104, 104, 104); 
     transition: color 0.2s;
+    font-family: "parkway-hotel", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .title:hover{
     color: rgb(50,50,50);
+}
+
+.footer{
+    margin-top: 2.5vh;
+}
+
+.description{
+    margin-top: 5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    line-height: 4vh;
+    font-size: 3vh;
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.button{
+    background-color: rgb(0,255,102);
+    color: rgb(104, 104, 104);
+    border: none;
+    text-align: center;
+    font-size: 6vh;
+    border-radius: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(104, 104, 104);
+    color: rgb(0,255,102);
+
+}
+
+.button:active{
+    opacity: 50%;
 }
