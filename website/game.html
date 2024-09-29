@@ -63,14 +63,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = "https://i-love-old-tech-bucket.s3.us-east-2.amazonaws.com/Build.loader.js";
+      var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: "https://i-love-old-tech-bucket.s3.us-east-2.amazonaws.com/Build.data.br",
-        frameworkUrl: "https://i-love-old-tech-bucket.s3.us-east-2.amazonaws.com/Build.framework.js.br",
-        codeUrl: "https://i-love-old-tech-bucket.s3.us-east-2.amazonaws.com/Build.wasm.br",
+        dataUrl: buildUrl + "/Build.data.br",
+        frameworkUrl: buildUrl + "/Build.framework.js.br",
+        codeUrl: buildUrl + "/Build.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "SunHackers",
+        //companyName: "DefaultCompany",
+        //productName: "SunHackers",
         productVersion: "0.1.0",
         showBanner: unityShowBanner,
       };
