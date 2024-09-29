@@ -21,6 +21,8 @@ public class MainMonitor : MonoBehaviour
 
     Queue<string> history = new Queue<string>();
 
+    public bool isFinished = false;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -59,11 +61,16 @@ public class MainMonitor : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        // Keep the Input Field active (Optional)
-        if (!userInputField.isFocused)
-        {
-            userInputField.ActivateInputField();
+    {   
+        if (!isFinished) 
+        {     
+            // Keep the Input Field active (Optional)
+            if (!userInputField.isFocused)
+            {
+                userInputField.ActivateInputField();
+            }
+        } else {
+            userInputField.DeactivateInputField();
         }
     }
 
@@ -74,16 +81,22 @@ public class MainMonitor : MonoBehaviour
 
         switch (newText) {
             case "cd AI":
+                stts.Scared();
                 bub.StartTyping("Looks like we are on the right 'path' -_^! <color=red>L</color>et's <color=red>S</color>ee what is hiding in here");
                 break;
 
             case "ls":
+                stts.Wink();
                 bub.StartTyping("Let's take a look around, maybe there are some important things here........");
                 break;
 
             case "cd AI/Plans":
+                stts.Laugh();
                 bub.StartTyping("This will probably be usefull sometime later, but now we are looking for CORE");
                 break;
+
+            // case "rm CORE_DO_NOT_REMOVE":
+            //     break;
 
             default:
                 break;
@@ -103,6 +116,11 @@ public class MainMonitor : MonoBehaviour
             history.Dequeue();
         }
         
+        if (lines[0] == "File CORE_DO_NOT_REMOVE removed.") 
+        {
+            stts.Destroyed();
+            isFinished = true;
+        }
         
         StringBuilder sb = new StringBuilder();
 
@@ -146,6 +164,7 @@ public class MainMonitor : MonoBehaviour
         stts.Neutral();
 
         //todo Add a call to sound here!!!
-        agentBubble.enabled = true;
+        
+        bub.StartTyping("Excellent work Agent! Now let's disable this AI for good! Type 'help' to see what we can use on this old machine");
     }
 }
