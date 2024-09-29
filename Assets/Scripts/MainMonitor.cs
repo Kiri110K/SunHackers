@@ -10,8 +10,8 @@ public class MainMonitor : MonoBehaviour
 {
     public TextMeshPro monitor;
     public TMP_InputField userInputField; // The InputField for user input
-    public const string prompt = "> ";
-    public Terminal t = new Terminal();
+    // public const string prompt = "> ";
+    public Terminal term = new Terminal();
 
     public InteractiveBubble bub;
 
@@ -97,7 +97,7 @@ public class MainMonitor : MonoBehaviour
         // Interactive Bubble here for now
 
 
-        string response = t.RunCommand(newText);
+        string response = term.RunCommand(newText);
 
         string[] lines = response.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -124,16 +124,16 @@ public class MainMonitor : MonoBehaviour
 
     private void SetupTerminal() 
     {
-        t.FS.CreateDirectory("","AI"); //todo
-        t.FS.CreateDirectory("","OS");
-        t.FS.CreateDirectory("", "bin");
+        term.FS.CreateDirectory("","AI"); //todo
+        term.FS.CreateDirectory("","OS");
+        term.FS.CreateDirectory("", "bin");
 
-        t.FS.CreateFile("AI", "Memories");
-        t.FS.CreateFile("AI", "CORE_DO_NOT_REMOVE");
-        t.FS.CreateDirectory("AI", "Plans");
+        term.FS.CreateFile("AI", "Memories");
+        term.FS.CreateFile("AI", "CORE_DO_NOT_REMOVE");
+        term.FS.CreateDirectory("AI", "Plans");
 
-        t.FS.CreateFile("OS", "system32");
+        term.FS.CreateFile("OS", "system32");
 
-        t.FS.CreateFile("bin", "PROGRAMS");
+        term.FS.CreateFile("bin", "PROGRAMS");
     }
 }
