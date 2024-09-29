@@ -1035,7 +1035,9 @@ MonoBehaviour:
   monitor: {fileID: 569921843}
   userInputField: {fileID: 1527230808}
   bub: {fileID: 1886145606}
-  stts: {fileID: 0}
+  stts: {fileID: 1136870155}
+  agentBubble: {fileID: 1635795325}
+
 --- !u!1 &1016030275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1244,7 @@ GameObject:
   - component: {fileID: 1136870153}
   - component: {fileID: 1136870155}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Secondary_Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2223,12 +2225,12 @@ GameObject:
   - component: {fileID: 1635795331}
   - component: {fileID: 1635795330}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Dialog_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1635795326
 RectTransform:
   m_ObjectHideFlags: 0
