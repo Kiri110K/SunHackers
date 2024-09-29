@@ -1185,7 +1185,7 @@ GameObject:
   - component: {fileID: 1024741960}
   - component: {fileID: 1024741959}
   m_Layer: 5
-  m_Name: Gialog_Bubble
+  m_Name: Dialog_Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2316,7 +2316,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635795325}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 397762603}
@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841318ae9c67c44d7ac0a3c8d96783b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentBubble: {fileID: 0}
+  bubbleCanvas: {fileID: 1635795329}
   bubble: {fileID: 1886145604}
   typingSpeed: 0.05
 --- !u!1660057539 &9223372036854775807
