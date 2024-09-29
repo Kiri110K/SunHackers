@@ -5,7 +5,7 @@ body{
 }
 
 p{
-    color: rgb(0,255,102);
+    color: rgb(255,176,0);
     font-family: helvetica, sans-serif;
     padding-left: 0vh;
     padding-right: 0VH;
@@ -38,7 +38,7 @@ p{
 }
 
 .title:hover{
-    color: rgb(50,50,50);
+    color: rgb(205,204,0);
     text-shadow: 5px 5px rgb(104, 104, 104); 
 
 }
@@ -70,7 +70,7 @@ a:active{
 }
 
 .button{
-    background-color: rgb(0,255,102);
+    background-color: rgb(255,176,0);
     color: rgb(104, 104, 104);
     border: none;
     text-align: center;
@@ -80,14 +80,14 @@ a:active{
     padding-right: 3vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    box-shadow: 5px 10px rgb(50,50,50);
-    transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
 }
 
 .button:hover{
     cursor: pointer;
     background-color: rgb(104, 104, 104);
-    color: rgb(0,255,102);
+    color: rgb(255,176,0);
+    box-shadow: 5px 5px rgb(104,104,104);
 
 }
 
@@ -99,4 +99,9 @@ a:active{
     font-family: "ethnocentric", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.heart:hover{
+    cursor: pointer;
+    font-size: 250%;
 }
