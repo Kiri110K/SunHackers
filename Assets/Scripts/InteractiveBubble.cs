@@ -23,14 +23,12 @@ public class InteractiveBubble : MonoBehaviour
     // Coroutine to type text one character at a time
     private IEnumerator TypeText(string inputText)
     {   
-        if (bubble) 
+        bubble.text = ""; // Clear the existing text
+        for (int i = 0; i < inputText.Length; i++)
         {
-            bubble.text = ""; // Clear the existing text
-            for (int i = 0; i < inputText.Length; i++)
-            {
-                bubble.text += inputText[i]; // Add one character at a time
-                yield return new WaitForSeconds(typingSpeed); // Wait between characters
-            }
+            bubble.text += inputText[i]; // Add one character at a time
+            yield return new WaitForSeconds(typingSpeed); // Wait between characters
         }
+        
     }
 }
