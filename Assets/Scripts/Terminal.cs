@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Terminal // : MonoBehaviour
 {
+    public AudioSource errorAudio;
 
     public PretendFS FS;
     public List<(string, string)> history;
@@ -110,6 +111,7 @@ public string RunCommand(string command)
 
             default:
                 result = "Command not found: " + cmd;
+                errorAudio.Play();
                 break;
         }
     }
